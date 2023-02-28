@@ -1,6 +1,11 @@
+import { Helmet } from "react-helmet-async";
+
 export default function About() {
   return (
     <>
+      <Helmet>
+        <title>About</title>
+      </Helmet>
       <section>
         <header>
           <h2>About Strickland Propane</h2>
