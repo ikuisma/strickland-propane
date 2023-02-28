@@ -1,15 +1,32 @@
-import { useQuery } from "@apollo/client";
-import { QUERY_PING } from "./utils/queries";
+import logo from "./strickland-logo.jpeg";
 
 function App() {
-  const { data, loading, error } = useQuery(QUERY_PING);
-  const ping = data?.ping;
-  const display = loading || error || `${ping.message} - ${ping.timestamp}!`;
   return (
     <>
-      <h1>Strickland Propane</h1>
-      <h2>Coming Soon!</h2>
-      <p>ping: {display}</p>
+      <header>
+        <nav>
+          <img src={logo} alt="Strickland Propane Logo" height="100" />
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+          </ul>
+        </nav>
+        <h1>Strickland Propane</h1>
+        <h2>Coming Soon!</h2>
+      </header>
+      <main>
+        <section>
+          <h3>Products Coming Soon</h3>
+        </section>
+      </main>
+      <footer>
+        <section>
+          <span>
+            Fuelled By C<sub>3</sub>H<sub>8</sub>
+          </span>
+        </section>
+      </footer>
     </>
   );
 }
