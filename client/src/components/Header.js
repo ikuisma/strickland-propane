@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "strickland-logo.jpeg";
 
 export default function Header() {
@@ -7,7 +8,10 @@ export default function Header() {
         <img src={logo} alt="Strickland Propane Logo" height="100" />
         <ul>
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
           </li>
         </ul>
       </nav>
